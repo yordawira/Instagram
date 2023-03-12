@@ -45,7 +45,7 @@ fun ProfileScreen() {
         TopBar(
             name = "yorda_wira321",
             modifier = Modifier
-                .padding(10.dp)
+                .padding(5.dp)
         )
         Spacer(modifier = Modifier.height(4.dp))
         ProfileSection()
@@ -60,19 +60,51 @@ fun ProfileScreen() {
                 ),
                 ImageWithText(
                     image = painterResource(id = com.catty.instagram.R.drawable.blank_2),
-                    text = "Blank"
+                    text = "A"
                 ),
                 ImageWithText(
                     image = painterResource(id = com.catty.instagram.R.drawable.blank_3),
-                    text = "Blank"
+                    text = "B"
                 ),
                 ImageWithText(
                     image = painterResource(id = com.catty.instagram.R.drawable.blank_4),
-                    text = "Blank"
+                    text = "C"
                 ),
                 ImageWithText(
                     image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
-                    text = "Blank"
+                    text = "D"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "E"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "F"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "G"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "H"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "I"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "J"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "K"
+                ),
+                ImageWithText(
+                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    text = "L"
                 ),
             ),
             modifier = Modifier
@@ -91,11 +123,7 @@ fun ProfileScreen() {
                     text = "Reels"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.ic_igtv),
-                    text = "IGTV"
-                ),
-                ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.profile),
+                    image = painterResource(id = com.catty.instagram.R.drawable.avatar),
                     text = "Profile"
                 ),
             )
@@ -165,7 +193,7 @@ fun ProfileSection(
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 20.dp)
+                .padding(horizontal = 10.dp)
         ) {
             RoundImage(
                 image = painterResource(id = com.catty.instagram.R.drawable.yorda),
@@ -180,11 +208,11 @@ fun ProfileSection(
             displayName = "Yorda Wira Aswin",
             description = "20'16 Teknik Informatika\n" +
                     "Mobile Developer Kotlin\n" +
-                    "https://g.dev/yordawiraaswin\n" +
+                    "g.dev/yordawiraaswin\n" +
                     "Life has no remote, get up and change it yourself\n" +
                     "- Mark A Cooper",
             url = "https://github.com/yordawira",
-            followedBy = listOf("codinginflow", "miakhalifa", "jokowidodo"),
+            followedBy = listOf("codinginflow", "androiddeveloper", "jokowidodo"),
             otherCount = 17
         )
     }
