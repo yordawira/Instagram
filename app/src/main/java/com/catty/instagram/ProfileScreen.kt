@@ -4,16 +4,12 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.R
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Icon
-import androidx.compose.material.Tab
-import androidx.compose.material.TabRow
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.KeyboardArrowDown
@@ -32,6 +28,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -55,55 +52,55 @@ fun ProfileScreen() {
         HighlightSection(
             highlights = listOf(
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_1),
+                    image = painterResource(id = R.drawable.blank_1),
                     text = "Baru"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_2),
+                    image = painterResource(id = R.drawable.blank_2),
                     text = "A"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_3),
+                    image = painterResource(id = R.drawable.blank_3),
                     text = "B"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_4),
+                    image = painterResource(id = R.drawable.blank_4),
                     text = "C"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "D"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "E"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "F"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "G"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "H"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "I"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "J"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "K"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.blank_5),
+                    image = painterResource(id = R.drawable.blank_5),
                     text = "L"
                 ),
             ),
@@ -115,15 +112,15 @@ fun ProfileScreen() {
         PostTabView(
             imageWithTexts = listOf(
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.ic_grid),
+                    image = painterResource(id = R.drawable.ic_grid),
                     text = "Posts"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.ic_reels),
+                    image = painterResource(id = R.drawable.ic_reels),
                     text = "Reels"
                 ),
                 ImageWithText(
-                    image = painterResource(id = com.catty.instagram.R.drawable.avatar),
+                    image = painterResource(id = R.drawable.ic_avatar),
                     text = "Profile"
                 ),
             )
@@ -133,12 +130,12 @@ fun ProfileScreen() {
         when(selectedTabIndex) {
             0 -> PostSection(
                 posts = listOf(
-                    painterResource(id = com.catty.instagram.R.drawable.kmm),
-                    painterResource(id = com.catty.instagram.R.drawable.intermediate_dev),
-                    painterResource(id = com.catty.instagram.R.drawable.master_logical_thinking),
-                    painterResource(id = com.catty.instagram.R.drawable.bad_habits),
-                    painterResource(id = com.catty.instagram.R.drawable.multiple_languages),
-                    painterResource(id = com.catty.instagram.R.drawable.learn_coding_fast),
+                    painterResource(id = R.drawable.kmm),
+                    painterResource(id = R.drawable.intermediate_dev),
+                    painterResource(id = R.drawable.master_logical_thinking),
+                    painterResource(id = R.drawable.bad_habits),
+                    painterResource(id = R.drawable.multiple_languages),
+                    painterResource(id = R.drawable.learn_coding_fast),
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -165,18 +162,19 @@ fun TopBar(
         )
         Text(
             text = name,
+            /*icon = Icons.Default.KeyboardArrowDown,*/
             overflow = TextOverflow.Ellipsis,
             fontWeight = FontWeight.Bold,
             fontSize = 20.sp
         )
         Icon(
-            painter = painterResource(id = com.catty.instagram.R.drawable.ic_bell),
+            painter = painterResource(id = R.drawable.ic_bell),
             contentDescription = "Back",
             tint = Color.Black,
             modifier = Modifier.size(24.dp)
         )
         Icon(
-            painter = painterResource(id = com.catty.instagram.R.drawable.ic_dotmenu),
+            painter = painterResource(id = R.drawable.ic_more),
             contentDescription = "Back",
             tint = Color.Black,
             modifier = Modifier.size(20.dp)
@@ -196,7 +194,7 @@ fun ProfileSection(
                 .padding(horizontal = 10.dp)
         ) {
             RoundImage(
-                image = painterResource(id = com.catty.instagram.R.drawable.yorda),
+                image = painterResource(id = R.drawable.yorda),
                 modifier = Modifier
                     .size(100.dp)
                     .weight(3f)
