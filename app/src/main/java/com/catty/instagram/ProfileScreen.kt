@@ -1,5 +1,6 @@
 package com.catty.instagram
 
+import android.graphics.drawable.Icon
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -29,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -109,24 +111,6 @@ fun ProfileScreen() {
                 .padding(horizontal = 20.dp)
         )
         Spacer(modifier = Modifier.height(10.dp))
-        PostTabView(
-            imageWithTexts = listOf(
-                ImageWithText(
-                    image = painterResource(id = R.drawable.ic_grid),
-                    text = "Posts"
-                ),
-                ImageWithText(
-                    image = painterResource(id = R.drawable.ic_reels),
-                    text = "Reels"
-                ),
-                ImageWithText(
-                    image = painterResource(id = R.drawable.ic_avatar),
-                    text = "Profile"
-                ),
-            )
-        ) {
-            selectedTabIndex = it
-        }
         when(selectedTabIndex) {
             0 -> PostSection(
                 posts = listOf(
@@ -180,6 +164,16 @@ fun TopBar(
             modifier = Modifier.size(20.dp)
         )
     }
+}
+
+@Composable
+fun BottomNavigation(
+    modifier: Modifier = Modifier,
+    backgroundColor: Color = MaterialTheme.colors.primarySurface,
+    contentColor: Color = contentColorFor(backgroundColor),
+    elevation: Dp = BottomNavigationDefaults.Elevation,
+    content: @Composable RowScope.() -> Unit
+): Unit {
 }
 
 @Composable
